@@ -12,14 +12,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AuthService } from './shared/services';
+import { MdbModule } from 'mdb-angular-ui-kit';
+import { MyridesComponent } from './myrides/myrides.component';
+import { AddNewRideComponent } from './add-new-ride/add-new-ride.component';
+
 
 export function appInitializerFactory(authService: AuthService) {
   return () => authService.checkTheUserOnTheFirstLoad();
 }
 
 @NgModule({
-  imports: [BrowserAnimationsModule, HttpClientModule, SharedModule, AppRoutingModule],
-  declarations: [AppComponent, HeaderComponent, HomeComponent],
+  imports: [BrowserAnimationsModule, HttpClientModule, SharedModule, AppRoutingModule, MdbModule],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, MyridesComponent, AddNewRideComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

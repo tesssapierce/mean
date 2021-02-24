@@ -2,8 +2,8 @@ header {
     width: 100%;
     .logo {
       background-image: url('../../assets/logo.png');
-      width: 50px;
-      height: 50px;
+      width: 100px;
+      height: 100px;
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -11,7 +11,7 @@ header {
       flex: 1 1 auto;
     }
     .links {
-      color: white;
+      color: black;
       font-family: 'Helvetica Neue', sans-serif;
       font-size: 15px;
       font-weight: initial;
@@ -23,15 +23,21 @@ header {
         padding: 0 14px;
       }
     }
-    .mat-toolbar {
-      background: black;
-    }
-    .mat-icon {
-      vertical-align: middle;
-      margin: 0 5px;
-    }
     a {
       cursor: pointer;
+    }
+
+    .nav-logo{
+      max-height: 100px;
+    }
+
+    .logout-btn{
+      margin: 0 auto;
+      font-size: 8px;
+    }
+    .nav-side-link{
+      text-align: center;
+      margin: 20px
     }
   }
  

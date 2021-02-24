@@ -3,11 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AuthGuard } from './shared/guards';
 import { HomeComponent } from './home/home.component';
+import { MyridesComponent } from './myrides/myrides.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    // canActivate: [AuthGuard],
+  },
+  {
+    path: 'my-rides',
+    component: MyridesComponent,
     canActivate: [AuthGuard],
   },
   {
